@@ -30,6 +30,6 @@ class Item
 end #End of Item class
 
 
-# mitch = Item.new("Beer", "$14.00", "tax imported")
-# mitch.tax
-# puts mitch.total_for_item
+ corona = Item.new("Beer", 14, "tax imported")
+ corona.tax
+ puts corona.total_for_item

@@ -12,7 +12,7 @@ attr_accessor :item
 	end
 
 
-	def total_sales_tax #add up taxes on each item
+	def total_sales_tax #add up taxes on each item in shopping_cart array
 		@shopping_cart.map.inject { |sum, e| sum + e.tax }
 	end
 
