@@ -11,13 +11,13 @@ class Item
 
 	def tax
 		if @product_type == "no_tax"
-				 0
+				 0.round(2)
 		elsif @product_type == "no_tax_imported"
-				@price * 0.05
+				(@price * 0.05).round(2)
 		elsif @product_type == "tax"
-				@price * 0.10
+				(@price * 0.10).round(2)
 		elsif @product_type == "tax_imported"
-				@price * 0.15
+				(@price * 0.15).round(2)
 		end
 	end
 

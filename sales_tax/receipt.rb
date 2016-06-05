@@ -25,10 +25,10 @@ attr_accessor :item
 
 	def output
 		@shopping_cart.each do |product|
-			puts "#{product.name} --> #{product.total_for_item}"
+			puts "#{product.name} --> #{product.total_for_item.round(2)}"
 		end #end of each do
-		puts "#{total_sales_tax}"
-		puts "#{total_cost}"
+		puts "#{total_sales_tax.round(2)}"
+		puts "#{total_cost.round(2)}"
 
 	end #end of output method
 
@@ -61,6 +61,7 @@ shopping_cart_2 = Receipt.new
 shopping_cart_2.add(imp_chocolate)
 shopping_cart_2.add(imp_perfume)
 
+
 ### shopping_cart_3
 imp_perfume = Item.new("Imported Perfume", 27.99, "tax_imported")
 perfume = Item.new("Perfume", 18.99, "tax")
@@ -76,11 +77,20 @@ shopping_cart_3.add(imp_chocolate)
 
 
 #####  Output  #####
-puts "---shopping_cart_1---"
+puts "---------------------------------"
+puts "---Shopping Cart 1---"
+puts "---------------------------------"
+puts "PRODUCT --> PRICE (with Tax)"
 puts shopping_cart_1.output
 
-puts "---shopping_cart_2---"
+puts "---------------------------------"
+puts "---Shopping Cart 2---"
+puts "---------------------------------"
+puts "PRODUCT --> PRICE (with Tax)"
 puts shopping_cart_2.output
 
-puts "---shopping_cart_3---"
+puts "---------------------------------"
+puts "---Shopping Cart 3---"
+puts "---------------------------------"
+puts "PRODUCT --> PRICE (with Tax)"
 puts shopping_cart_3.output
