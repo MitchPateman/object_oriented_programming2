@@ -27,8 +27,8 @@ attr_accessor :item
 		@shopping_cart.each do |product|
 			puts "#{product.name} --> #{product.total_for_item.round(2)}"
 		end #end of each do
-		puts "#{total_sales_tax.round(2)}"
-		puts "#{total_cost.round(2)}"
+		puts "Total Sales Tax:  #{total_sales_tax.round(2)}"
+		puts "Total Cost:  #{total_cost.round(2)}"
 
 	end #end of output method
 
