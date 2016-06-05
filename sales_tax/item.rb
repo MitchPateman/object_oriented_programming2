@@ -28,8 +28,3 @@ class Item
 
 
 end #End of Item class
-
-
- corona = Item.new("Beer", 14, "tax imported")
- corona.tax
- puts corona.total_for_item
