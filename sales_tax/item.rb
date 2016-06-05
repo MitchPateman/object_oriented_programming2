@@ -12,11 +12,11 @@ class Item
 	def tax
 		if @product_type == "no_tax"
 				 0
-		elsif @product_type == "no_tax imported"
+		elsif @product_type == "no_tax_imported"
 				@price * 0.05
 		elsif @product_type == "tax"
 				@price * 0.10
-		elsif @product_type == "tax imported"
+		elsif @product_type == "tax_imported"
 				@price * 0.15
 		end
 	end

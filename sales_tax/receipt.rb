@@ -41,8 +41,8 @@ end # end of Receipt class
 #### Below is the Point Of Sale ###
 ###################################
 
-### shopping_cart_1
 
+### shopping_cart_1
 book = Item.new("Book", 12.49, "no_tax")
 cd = Item.new("CD", 14.99, "tax")
 chocolate = Item.new("Chocolate Bar", 0.85, "no_tax")
@@ -52,19 +52,35 @@ shopping_cart_1.add(book)
 shopping_cart_1.add(cd)
 shopping_cart_1.add(chocolate)
 
-### shopping_cart_2
 
-imp_chocolate = Item.new("Imported Chocolate", 10.50, "no_tax imported")
-imp_perfume = Item.new("Imported Perfume", 54.65, "tax imported")
+### shopping_cart_2
+imp_chocolate = Item.new("Imported Chocolate", 10.00, "no_tax_imported")
+imp_perfume = Item.new("Imported Perfume", 47.50, "tax_imported")
 
 shopping_cart_2 = Receipt.new
 shopping_cart_2.add(imp_chocolate)
 shopping_cart_2.add(imp_perfume)
+
+### shopping_cart_3
+imp_perfume = Item.new("Imported Perfume", 27.99, "tax_imported")
+perfume = Item.new("Perfume", 18.99, "tax")
+headache_pills = Item.new("Headache Pills", 9.75, "no_tax")
+imp_chocolate = Item.new("Imported Chocolate", 11.25, "no_tax_imported")
+
+shopping_cart_3 = Receipt.new
+shopping_cart_3.add(imp_perfume)
+shopping_cart_3.add(perfume)
+shopping_cart_3.add(headache_pills)
+shopping_cart_3.add(imp_chocolate)
 
 
 
 #####  Output  #####
 puts "---shopping_cart_1---"
 puts shopping_cart_1.output
+
 puts "---shopping_cart_2---"
 puts shopping_cart_2.output
+
+puts "---shopping_cart_3---"
+puts shopping_cart_3.output
