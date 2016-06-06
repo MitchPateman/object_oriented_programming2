@@ -13,13 +13,13 @@ attr_accessor :item
 
 
 	def total_sales_tax #add up taxes on each item in shopping_cart array
-		@shopping_cart.inject(0) { |sum, product| sum += product.tax }
+		@shopping_cart.inject(0) { |sum, n| sum += n.tax }
 
 	end
 
 
 	def total_cost #what customer pays
-	@shopping_cart.inject(0) { |sum, product| sum += product.total_for_item }
+	@shopping_cart.inject(0) { |sum, n| sum += n.total_for_item }
 	end
 
 
@@ -38,9 +38,11 @@ end # end of Receipt class
 
 
 ###################################
-#### Below is the Point Of Sale ###
+#### Below is the INPUT / Output ###
 ###################################
 
+
+#INPUT#
 
 ### shopping_cart_1
 book = Item.new("Book", 12.49, "no_tax")
